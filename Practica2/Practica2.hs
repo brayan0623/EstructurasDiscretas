@@ -1,3 +1,5 @@
+--Actividades para la Practica 2.
+
 {- Funcion: reconversion
 Descripcion: recibe un dato numerico de tipo Float y quita tres ceros al valor ingresado.
 Uso: reconversion 1000 = 1.0
@@ -43,3 +45,16 @@ minutosHoras x =
   (if x `mod` 60 == 1
   then show (x `mod` 60) ++ " minuto "
   else show (x `mod` 60) ++ " minutos ")
+
+
+
+{- Funcion: esEstafa
+Descripcion: detecta si un comerciante esta siendo estafado si un cliente entrega un billete de alta denominacion que excede el valor de un producto x  con el fin de pagarlo, el comerciante devulve el cambio corresopondiente y el cliente entrega otro billete con una denominacion exacta al precio del producto x mientras exige que se le devuelva su billete inicial. El comerciante recibe el nuevo billete y devuelve el billete inicial de alta denominacion pero el cliente no devuelve el cambio inicial que recibio por el primer billete de alta denominacio y el comerciante termina con una cantidad de dinero menor al precio del producto x. La funcion esEstafa trabaja con valores tipo bool, si es estafa responde True, si no lo es, responde False.
+Uso: esEstafa 100 200 100 0 = True
+-}
+
+esEstafa :: Int -> Int -> Int -> Int -> Bool
+esEstafa precio billeteGrande billeteChico cambioDevuelto =
+    if (billeteChico - (billeteGrande - precio) + cambioDevuelto) < precio
+    then True
+    else False
