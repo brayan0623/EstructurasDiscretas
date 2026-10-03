@@ -58,3 +58,16 @@ esEstafa precio billeteGrande billeteChico cambioDevuelto =
     if (billeteChico - (billeteGrande - precio) + cambioDevuelto) < precio
     then True
     else False
+
+
+
+{- Funcion: esDescendente
+Descripcion: usa valores booleanos para señalar si una secuencia de numeros fue ingresada de manera descendente o no. Si es descendente, True, si no lo es, False.
+Uso: esDescendente 10 9 8 7 = True
+-}
+
+esDescendente :: Float -> Float -> Float -> Float -> Bool
+esDescendente w x y z =
+  if w > x && x > y && y > z
+  then True
+  else False
