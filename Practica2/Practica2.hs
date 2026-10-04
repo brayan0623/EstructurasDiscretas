@@ -71,3 +71,29 @@ esDescendente w x y z =
   if w > x && x > y && y > z
   then True
   else False
+
+
+
+{- Funcion: imc
+Descripcion: imc recibe 2 parametros de tipo float y devuelve un valor de tipo String.Ingresas su peso en kg y posteriormente tu estatura en metros, imc devolvera un valor distinto segun sea el caso (bajo peso, peso normal, sobrepeso, obesidad, obesidad clase 1, obesidad clase 2, obesidad clase 3)
+Uso: imc 53.5 1.61 = peso normal
+-}
+
+imc :: Float -> Float -> String
+imc x y =
+  if x / y^2 < 18.5
+  then  " Bajo peso "
+  else if x / y^2 >= 18.5 && x / y^2 <= 24.9
+    then " Peso normal "
+    else if x / y^2 >= 25 && x / y^2 <= 29.9
+      then " Sobrepeso "
+      else if x / y^2 >= 29.99 && x / y^2 < 30
+        then " Obesidad "
+	  else if x / y^2 >= 30 && x / y^2 <= 34.9
+	    then " Obesidad clase 1 "
+	    else if x / y^2 >= 35 && x / y^2 <= 39.9
+	      then " Obesidad clase 2 "
+	      else " Obesidad clase 3 "
+
+
+
