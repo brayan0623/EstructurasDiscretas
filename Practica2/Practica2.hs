@@ -117,3 +117,10 @@ pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1)
 
 
 
+{- Funcion: distanciaPuntos
+Descripcion: la funcion recibe 2 tuplas con datos de tipo Float, que representan las coordenadas de 2 puntos especificos, distanciaPuntos devuelve un dato de tipo Float que representa la distancia entre ambas coordenadas.
+Uso: distanciaPuntos (2.0, 1.0) (5.0, 5.0) = 5.0
+-}
+
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos (x1, y1) (x2, y2) = sqrt ((x2 - x1)^2 + (y2 - y1)^2)
