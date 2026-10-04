@@ -104,3 +104,16 @@ Uso: hipotenusa 9.0 12.0 = 15.0
 
 hipotenusa :: Float -> Float -> Float
 hipotenusa b h = sqrt (b^2 + h^2)
+
+
+
+{- Funcion: pendiente
+Descripcion: la funcion recibe 2 tuplas con datos de tipo Float, que representan las coordenadas donde estan ubicados 2 puntos distintos, y debe devolver un valor de tipo Float que representa la pendiente de la recta que pasa por ambos puntos.
+Uso: pendiente (3.0, 2.0) (7.0, 8.0) = 1.5
+-}
+
+pendiente :: (Float, Float) -> (Float, Float) -> Float
+pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1)
+
+
+
