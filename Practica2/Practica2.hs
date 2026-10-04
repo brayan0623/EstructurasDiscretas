@@ -97,3 +97,10 @@ imc x y =
 
 
 
+{- Funcion: hipotenusa
+Descripcion: recibe 2 datos de tipo Float donde b representa la longitud de la base y h, la longitud de su altura. La funcion devulve un valor Float que representa la longitud de la hipotenusa de dicho triangulo.
+Uso: hipotenusa 9.0 12.0 = 15.0
+-}
+
+hipotenusa :: Float -> Float -> Float
+hipotenusa b h = sqrt (b^2 + h^2)
