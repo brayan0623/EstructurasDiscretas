@@ -1,4 +1,4 @@
-#Objetivo de la pŕactica
+# Objetivo de la pŕactica
 Conocer acerca de las peculiaridades, similitudes y principalmente, las diferencias que mantienen los lenguajes de programación Haskell y Rust. Esto porque Haskell será el primer lenguje de programación que usaremos para las prácticas de la materia de Estructuras Discretas y es necesario establecer un primer contacto para poder familiarizarnos con él.
 
 También se buscó entender cuáles han sido los factores que han determinado el que un lenguaje de programación puramente funcional ,como lo es Haskell, nunca ha terminado de popularizarse tanto como sí lo han hecho otros lenguajes, por ejeplo: Java, Python, JavaScript, etc.
