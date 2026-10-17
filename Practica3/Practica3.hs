@@ -20,3 +20,11 @@ Uso: soloPares [1, 2, 3, 4] = [2, 4]
 soloPares :: [Int] -> [Int]
 soloPares xs = [x | x <- xs, esParBit x]
 
+
+{- Funcion: primos
+Descripcion: devuelve los primos de la lista dada
+Uso: primos [1..20] = [2, 3, 5, 7, 11, 13, 17, 19]
+-}
+
+primos :: [Int] -> [Int]
+primos xs = [x | x <- xs, length(divisores x) == 2]
