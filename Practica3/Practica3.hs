@@ -28,3 +28,11 @@ Uso: primos [1..20] = [2, 3, 5, 7, 11, 13, 17, 19]
 
 primos :: [Int] -> [Int]
 primos xs = [x | x <- xs, length(divisores x) == 2]
+
+
+{- Funcion: coprimos
+Descripcion: recibe un numero entero y devuelve una lista de los coprimos de n
+-}
+
+coprimos :: Int -> [Int]
+coprimos x = [y | y <- [1..x], [d | d <- divisores y, mod x d == 0] == [1]]
