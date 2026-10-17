@@ -1,6 +1,18 @@
 import Data.Bits ((.&.))
-import FuncionesExtraModule (esParBit, divisores)
+import FuncionesExtraModule (esParBit, divisores, mesesDias, tasaInteres)
 --Actividades para la practica 3.
+
+
+{- Funcion: cetes
+Descripcion: recibe un monto inicial, y un plazo en meses o dias y devuelve el monto final al
+concluir el plazo de tiempo seleccionado.
+Uso: cetes 100 ("Meses", 1) = 100.47
+-}
+
+cetes :: Double -> (String, Double) -> Double
+cetes x (y, z) = x * (1 + tasaInteres (y, z) * (mesesDias (y, z) / 360))
+
+
 
 
 {- Funcion: negativos
