@@ -13,6 +13,15 @@ cetes :: Double -> (String, Double) -> Double
 cetes x (y, z) = x * (1 + tasaInteres (y, z) * (mesesDias (y, z) / 360))
 
 
+{- Funcion: mensajeCetes
+Descripcion: mensajeCetes recibe un monto inicial de inversion, un plazo expresado en dias y 
+devuelve un mensaje indicando: el plazo de la inversion, el rendimiento bruto obtenido y el monto
+acumulado al finalizar el plazo.
+Uso: 
+-}
+
+mensajeCetes :: Double -> (String, Double) -> String
+mensajeCetes x (y, z) = (" Despues de " ++ show (mesesDias (y, z)) ++ " dias, obtuve " ++ show (x * (tasaInteres (y, z) * (mesesDias (y, z) / 360))) ++ " de rendimiento bruto sin asumir ningun riesgo crediticio. El monto total de mi inversion es de " ++ show (x * (1 + tasaInteres (y, z) * (mesesDias (y, z) / 360))))
 
 
 {- Funcion: negativos
