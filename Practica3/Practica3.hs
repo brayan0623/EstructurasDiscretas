@@ -17,7 +17,8 @@ cetes x (y, z) = x * (1 + tasaInteres (y, z) * (mesesDias (y, z) / 360))
 Descripcion: mensajeCetes recibe un monto inicial de inversion, un plazo expresado en dias y 
 devuelve un mensaje indicando: el plazo de la inversion, el rendimiento bruto obtenido y el monto
 acumulado al finalizar el plazo.
-Uso: 
+Uso: mensajeCetes 100 ("Meses",6) = " Despues de 182.0 dias, obtuve 3.493388888888888 de rendimiento bruto
+sin asumir ningun riesgo crediticio. El monto total de mi inversione es de 103.49338888888889"
 -}
 
 mensajeCetes :: Double -> (String, Double) -> String
